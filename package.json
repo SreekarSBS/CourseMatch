@@ -1,0 +1,29 @@
+{
+  "name": "coursematch",
+  "version": "1.0.0",
+  "description": "# A website to help find your Course Interests that kickstart your Career.",
+  "default": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SreekarSBS/CourseMatch.git"
+  },
+  "author": "Sreekar SBS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SreekarSBS/CourseMatch/issues"
+  },
+  "homepage": "https://github.com/SreekarSBS/CourseMatch#readme",
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1",
+    "tailwindcss": "^4.1.8"
+  }
+}
