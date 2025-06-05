@@ -4,6 +4,8 @@
   "description": "# A website to help find your Course Interests that kickstart your Career.",
   "default": "App.js",
   "scripts": {
+    "start" : "parcel index.html",
+    "build": "parcel build index.html" ,
     "test": "jest"
   },
   "repository": {

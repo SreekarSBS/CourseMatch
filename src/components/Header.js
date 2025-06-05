@@ -3,7 +3,7 @@ import { LOGO_URL } from "../utils/constants";
 import React from "react";
 const Header = () => {
   return (
-    <div className="border shadow-lg flex ">
+    <div className="border shadow-lg flex justify-between ">
         <div className="flex justify-between ">
       <div className="m-4 p-4 flex items-center">
         <Link to="/">
@@ -24,7 +24,7 @@ const Header = () => {
       
       <div className="bg-amber-300 h-6 w-6 m-12 p-3 ml-[944px] absolute rounded-2xl"></div>
       </div>
-      <div className="flex items-center ml-96 ">
+      <div className="flex items-center mr-16 ">
       <div className=" text-lg  ml-6">Coursematch Business</div>
       <div className=" text-lg  ml-6">About Us</div>
       <div className=" text-lg  ml-6 "><svg
