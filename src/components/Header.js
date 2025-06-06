@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import { LOGO_URL } from "../utils/constants";
-import React from "react";
+import React, { useState } from "react";
 const Header = () => {
+  const [isLoggedIn , setIsLoggedIn]  =useState(false);
+
+ const handleClick = () => {
+  setIsLoggedIn(!isLoggedIn);
+ }
+
   return (
     <div className="border shadow-lg flex justify-between ">
         <div className="flex justify-between  ">
@@ -25,9 +31,9 @@ const Header = () => {
       <button className="bg-amber-300 h-6 w-6 m-12 p-3 2xl:ml-[969px] absolute rounded-2xl xl:ml-[910px] cursor-pointer"></button>
       </div>
       <div className="flex items-center 2xl:mr-16 xl:mr-6 ">
-      <div className=" text-lg  2xl:ml-6 xl:mr-8 ">Coursematch Business</div>
-      <div className=" text-lg  2xl:ml-6 xl:mr-8 ">About Us</div>
-      <div className=" text-lg  2xl:ml-6  "><svg
+      <div className=" text-lg  2xl:ml-6 xl:mr-8 "><Link to = "/Business">Coursematch Business</Link></div>
+      <div className=" text-lg  2xl:ml-6 xl:mr-8 "><Link to = "/About">About Us</Link></div>
+      <div className=" text-lg  2xl:ml-6  "><Link to = "/Cart"><svg
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   x="0"
@@ -41,9 +47,11 @@ const Header = () => {
       d="M27.4 13.7V7.6H0v6.1h21.3V99H97.5v-6H27.4V13.7zm6.1 54.9h82.3v-6.1H33.5v6.1zm0 15.2h73.1v-6.1H33.5v6.1zm3.1 18.3c-5 0-9.1 4.1-9.1 9.1 0 5.1 4.1 9.1 9.1 9.1s9.1-4.1 9.1-9.1-4.1-9.1-9.1-9.1zm45.7 0c-5 0-9.1 4.1-9.1 9.1 0 5.1 4.1 9.1 9.1 9.1s9.1-4.1 9.1-9.1-4.1-9.1-9.1-9.1zM33.5 53.3h88.4v-6.1H33.5v6.1zm0-21.3v6.1H128V32H33.5z"
     />
   </g>
-</svg>
+</svg></Link>
 </div>
-      <div className=" text-lg   ml-6">Login</div>
+        <div onClick={handleClick} className=" text-lg ml-6 cursor-pointer"> { isLoggedIn ? "Logout" : "Login" }</div>
+        
+      
       </div>
     </div>
   );

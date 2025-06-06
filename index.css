@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+.embla {
+    overflow: hidden;
+  }
+  
+  .embla__container {
+    display: flex;
+   
+  }
+  
+  .embla__slide {
+    flex: 0 0 100%;
+    width: 0;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  
