@@ -4,12 +4,12 @@ import React from "react";
 const Header = () => {
   return (
     <div className="border shadow-lg flex justify-between ">
-        <div className="flex justify-between ">
-      <div className="m-4 p-4 flex items-center">
+        <div className="flex justify-between  ">
+      <div className="m-4 p-4 flex items-center ">
         <Link to="/">
           <img className="h-12 w-auto mr-6" src={LOGO_URL} />
         </Link>
-        <span className="m-2 pt-2 text-lg">
+        <span className="m-2 pt-2 text-lg xl:ml-8 ">
           <Link to="/Explore">Explore</Link>
         </span>
       </div>
@@ -18,16 +18,16 @@ const Header = () => {
         <input
           type="text"
           placeholder="Find expert-led courses to boost your career"
-          className="border border-black mt-10 p-2 pr-96 rounded-2xl"
+          className="border border-black mt-10 p-2 2xl:pr-96 xl:pr-80 rounded-2xl"
         ></input>
       </div>
       
-      <div className="bg-amber-300 h-6 w-6 m-12 p-3 ml-[944px] absolute rounded-2xl"></div>
+      <button className="bg-amber-300 h-6 w-6 m-12 p-3 2xl:ml-[969px] absolute rounded-2xl xl:ml-[910px] cursor-pointer"></button>
       </div>
-      <div className="flex items-center mr-16 ">
-      <div className=" text-lg  ml-6">Coursematch Business</div>
-      <div className=" text-lg  ml-6">About Us</div>
-      <div className=" text-lg  ml-6 "><svg
+      <div className="flex items-center 2xl:mr-16 xl:mr-6 ">
+      <div className=" text-lg  2xl:ml-6 xl:mr-8 ">Coursematch Business</div>
+      <div className=" text-lg  2xl:ml-6 xl:mr-8 ">About Us</div>
+      <div className=" text-lg  2xl:ml-6  "><svg
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   x="0"

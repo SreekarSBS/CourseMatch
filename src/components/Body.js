@@ -1,4 +1,5 @@
 import CourseCard from "./CourseCard"
+
 /**
  * 
  * Body
@@ -6461,6 +6462,8 @@ const prices2 = {
    console.log(prices);
    console.log(courseList.items.length);
    
+   
+
     return <div>
         <div className="search"></div>
 

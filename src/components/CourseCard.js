@@ -1,9 +1,9 @@
 const CourseCard = (props) => {
   const { course, prices } = props;
   const keys = Object.keys(prices);
-  
-  return (
-    <div className=" w-[265px] p-2.5 m-6 cursor-pointer border-2 border-gray-300 rounded-lg hover:border-amber-600   " >
+
+  return ( 
+    <div className="box w-[265px] p-2.5  xl:m-10 2xl:m-6 cursor-pointer border-2 border-gray-300 rounded-lg hover:border-amber-600     " >
       <img
         className="h-40 w-[400px]"
         src={course.image_240x135}
@@ -41,7 +41,12 @@ const CourseCard = (props) => {
        
       })}
     </div>
+
+    
+    
+    
   );
 };
+
 
 export default CourseCard;
