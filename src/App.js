@@ -1,4 +1,4 @@
-import React from "react";
+import React, {  useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import { BrowserRouter, createBrowserRouter, Outlet } from "react-router-dom";
@@ -8,16 +8,39 @@ import About from "./components/About";
 import Business from "./components/Business";
 import Explore from "./components/Explore";
 import { RouterProvider } from "react-router-dom";
+import CourseInfo from "./components/CourseInfo";
+
+
+
 
 // Outlet is used to render the ((child components)) in the parent component.
-export const AppLayout  = () => {
+ const AppLayout  = () => {
+    
+    const [filteredCourses ,setFilteredCourses] = useState([]);
+    const [allCourses ,setAllCourses] = useState([]);
+ 
+  
     return <div>
       
-        <Header/>
-        <Outlet/>
+        <Header allCourses = {allCourses} setFilteredCourses = {setFilteredCourses}/>
+        <Outlet context = {[filteredCourses,setFilteredCourses,allCourses ,setAllCourses]} />
       
     </div>
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Routing is done usign AppRouter
 // Array of objects is used to define the routes
@@ -29,7 +52,7 @@ const appRouter = createBrowserRouter([
     children : [
         {
             path : "/",
-            element : <Body/>
+            element : <Body  />
         },
         {
             path : "/Explore",
@@ -46,6 +69,10 @@ const appRouter = createBrowserRouter([
         {
             path : "/Cart",
             element : <Cart/>
+        },
+        {
+            path : "/courses/:id",
+            element : <CourseInfo/>
         }
     ]
 

@@ -6,6 +6,9 @@ import {PRICES2} from "../utils/constants"
 import {PRICES3} from "../utils/constants"
 import Shimmer from "./Shimmer"
 import EmblaCarousel from "./EmblaCarousel"
+import { Link, useOutletContext } from "react-router-dom"
+
+
 /**
  * 
  * Body
@@ -21,10 +24,10 @@ import EmblaCarousel from "./EmblaCarousel"
 
 const Body = () => {
 
-  const [allCourses ,setAllCourses] = useState([]);
-
+  
+  const [filteredCourses ,setFilteredCourses,allCourses ,setAllCourses] = useOutletContext()
   const [coursePrices ,setCoursePrices] = useState();
-
+  
   useEffect(() => {
     fetchData();
     fetchPrices();
@@ -36,7 +39,7 @@ const Body = () => {
     const data = await fetch(COURSES_API);
     const jsonData = await data.json();
     setAllCourses(jsonData?.units?.[0]?.items)
-   
+    setFilteredCourses(jsonData?.units?.[0]?.items)
   }
 
 
@@ -58,8 +61,10 @@ const Body = () => {
       return <Shimmer courses = {allCourses}/>
     }
     
+    
   }
 
+  
 
     return <div className="">
          <div className="p-24">
@@ -67,11 +72,11 @@ const Body = () => {
       <EmblaCarousel />
     </div>
 
-        <div className="cards-container flex flex-wrap">
+        <div className="cards-container flex justify-evenly flex-wrap">
 
-      { allCourses.map((course) =>{
+      { filteredCourses.map((course) =>{
          
-            return <CourseCard key ={course.id}  course = {course} prices = {{coursePrices}} />
+            return <Link key ={course.id} to = {"/courses/" + course.id }><CourseCard   course = {course} prices = {{coursePrices}} /></Link> 
       } )}
 
         
@@ -81,3 +86,4 @@ const Body = () => {
 }
 
 export default Body;
+

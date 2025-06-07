@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom";
 import { LOGO_URL } from "../utils/constants";
 import React, { useState } from "react";
-const Header = () => {
-  const [isLoggedIn , setIsLoggedIn]  =useState(false);
 
- const handleClick = () => {
-  setIsLoggedIn(!isLoggedIn);
- }
+
+
+const Header = ({allCourses , setFilteredCourses }) => {
+  const [isLoggedIn , setIsLoggedIn]  =useState(false);
+ const [searchText, setSearchText] = useState("");
+  const handleClick = () => {
+    setIsLoggedIn(!isLoggedIn);
+   }
+   
+    const handleSearch = (e) => {
+    setSearchText(e.target.value);
+    const filteredList = allCourses.filter((course) =>  course.title.toLowerCase().includes(searchText.toLowerCase()) )
+    setFilteredCourses(filteredList);
+  }
+
 
   return (
     <div className="border shadow-lg flex justify-between ">
@@ -22,6 +32,7 @@ const Header = () => {
 
       <div>
         <input
+          onChange={handleSearch}
           type="text"
           placeholder="Find expert-led courses to boost your career"
           className="border border-black mt-10 p-2 2xl:pr-96 xl:pr-80 rounded-2xl"
