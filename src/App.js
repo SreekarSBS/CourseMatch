@@ -13,6 +13,7 @@ import CourseInfo from "./components/CourseInfo";
 
 
 
+
 // Outlet is used to render the ((child components)) in the parent component.
  const AppLayout  = () => {
     
