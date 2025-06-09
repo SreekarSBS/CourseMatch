@@ -17,7 +17,7 @@ const CourseInfo = () => {
     const courseData2 = useCourseInfo2(id);
 
     const instructors = courseData.visible_instructors?.map((item) => item.display_name );
- console.log(isPersonal);
+
  
    return <div className="border h-[450px] bg-black flex ml-[-45px] ">
          <div className=" 2xl:ml-[339px] xl:ml-[200px]   w-[840px] h-96  " >

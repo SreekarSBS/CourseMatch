@@ -55,21 +55,20 @@ const Body = () => {
 
 
     setCoursePrices({...jsonData1?.courses ,...jsonData2?.courses, ...jsonData3?.courses});
-    
    
-    if(!allCourses || allCourses.length === 0 ) {
-      return <Shimmer courses = {allCourses}/>
-    }
     
     
   }
 
   
+  if(!filteredCourses || filteredCourses.length === 0 ) {
+    return <Shimmer />
+  }
 
     return <div className="">
          <div className="p-24">
       
-      <EmblaCarousel />
+      { filteredCourses? <EmblaCarousel/ > : <Shimmer /> }
     </div>
 
         <div className="cards-container flex justify-evenly flex-wrap">
