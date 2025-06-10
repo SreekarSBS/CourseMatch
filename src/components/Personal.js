@@ -1,20 +1,28 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 
-const Personal = ({courseData}) => {
-    const [courseList,setCourseList] = useState()
-    let cartItems = [];
-    const handleClick = () => {
-        
-        cartItems.add(courseData)
-        setCourseList(cartItems)
-        console.log(courseList);
-        
-    }
+
+
+const Personal = ({courseData, courseData2}) => {
+  
+    const [isAdded , setIsAdded] = useState(false);
+    
+    const dispatch = useDispatch();
+   const handleCart = () => {
+    const merged = {...courseData, ...courseData2};
+   { !isAdded && dispatch(addItem(merged));}
+   if(isAdded) alert("Item already added to cart");
+    setIsAdded(true);
+
+    
+   }
  return <div className= "h-[720px] ">
  <p className="font-stretch-expanded font-serif font-bold text-3xl  m-4 p-2 flex mt-4">{courseData.price}</p>
  
  <div className="flex mt-[-15px] ">
- <div onClick={handleClick} className="cursor-pointer text-xl m-4 p-4  w-4/6 font-bold font-stretch-105% text-center rounded-2xl border border-amber-600 hover:bg-amber-400">
+ <div onClick = {handleCart} className="cursor-pointer text-xl m-4 p-4  w-4/6 font-bold font-stretch-105% text-center rounded-2xl border border-amber-600 hover:bg-amber-400">
  <p className="">Add To Cart</p>
  </div>
  <div className="cursor-pointer  text-xl m-4 p-4 w-2/6 font-bold font-stretch-105% text-center rounded-2xl border border-amber-600 hover:bg-amber-400">

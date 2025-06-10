@@ -62,7 +62,7 @@ const Body = () => {
 
   
   if(!filteredCourses || filteredCourses.length === 0 ) {
-    return <Shimmer />
+    return <Shimmer filteredCourses = {filteredCourses} />
   }
 
     return <div className="">
