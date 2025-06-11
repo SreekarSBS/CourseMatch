@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
@@ -9,12 +9,16 @@ const Personal = ({courseData, courseData2}) => {
   
     const [isAdded , setIsAdded] = useState(false);
     
+    const cartItems = useSelector((store) => store.cart.items);
+
     const dispatch = useDispatch();
    const handleCart = () => {
     const merged = {...courseData, ...courseData2};
-   { !isAdded && dispatch(addItem(merged));}
+   { ! cartItems.find((item) => item.id === merged.id) && (dispatch(addItem(merged)));}
+  setIsAdded(true)
+   
    if(isAdded) alert("Item already added to cart");
-    setIsAdded(true);
+   
 
     
    }

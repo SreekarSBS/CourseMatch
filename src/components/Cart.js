@@ -27,17 +27,17 @@ useEffect(() => {
   
     return cartItems.length === 0 ? <div><h1 className="p-8 m-8 text-7xl font-bold text-gray-600">Shopping Cart</h1> <h1 className="text-2xl m-8 p-8">Your cart is empty</h1></div> : 
     <div>
-        <h1 className="p-8 m-8 text-7xl font-bold text-gray-600">Shopping Cart</h1>
+        <h1 className="p-8 m-8 ml-80 text-7xl font-bold text-gray-600">Shopping Cart</h1>
         <div className="Course-container ">
-        <div className="flex">
+        <div className="flex justify-evenly ">
             <div className="Cart-items ">
             {
                 
             cartItems.map((course) => {
                
                 return ( <div key = {course.id }>
-                    <hr className="ml-8 border-gray-300"/>
-                    <div  className="flex m-6 p-6 ml-48 w-8/12">
+                    <hr className="ml-8 border-gray-300 w-8/12"/>
+                    <div  className="flex m-6 p-6 ml-48 2xl:w-8/12 xl:w-6/12 xl:m-0 xl:ml-16">
                          
                         <div><img src= {course.image_240x135} /> </div>
                         <div  >
@@ -71,7 +71,7 @@ useEffect(() => {
             }
            
             </div>
-            <div className="  w-2/12  mt-[-60px] ml-6 2xl:mr-0 xl:ml-[-360px] Total-amount">
+            <div className="  w-2/12  mt-[-60px]  2xl:ml-[-460px]  xl:ml-[-360px] Total-amount">
                 <h1 className="text-xl text-gray-500 mx-4 mt-4 px-4">Total:</h1>
                 <h1 className="text-3xl ml-6"> ₹{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h1>
                 <button className="text-white bg-amber-500 rounded-2xl w-full m-4 p-4">Proceed to checkout →</button>
@@ -80,7 +80,7 @@ useEffect(() => {
                 
                 <button className="text-white bg-amber-500 rounded-2xl w-full m-4 p-4">Apply Coupon</button>
 
-                <button onClick={() => handleClear()} className="cursor-pointer rounded-4xl bg-red-500 text-3xl h-20 w-36 ml-28 mt-28 text-shadow-red-600">🗑️ Clear</button>
+                <button onClick={() => handleClear()} className="cursor-pointer rounded-4xl bg-red-500 text-3xl h-20 w-36 ml-28 mt-28 text-shadow-red-600">🗑️Clear</button>
             </div>
         </div>
         </div>

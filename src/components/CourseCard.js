@@ -7,8 +7,8 @@ const CourseCard = (props) => {
 
   return ( 
     <div className=" box w-[305px] h-96 p-2.5  xl:m-10 2xl:m-6 cursor-pointer border-2 border-gray-300 rounded-lg hover:border-amber-600 " >
-      <img
-        className="h-40 "
+      <img 
+        className="h-40 rounded-lg "
         src={course.image_240x135}
         alt="Course Thumbnail"
       />

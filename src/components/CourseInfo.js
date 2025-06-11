@@ -7,17 +7,33 @@ import useCourseInfo2 from "../utils/useCourseInfo2";
 import { useState } from "react";
 import Personal from "./Personal";
 import Teams from "./Teams";
+import usecourseInfo3 from "../utils/useCourseInfo3";
 
 const CourseInfo = () => {
     
     const [isPersonal , setIsPersonal] = useState(true);
     const {id} = useParams();
-    
+    const [overflow , setOverflow] = useState(false)
     const courseData = useCourseInfo(id);
     const courseData2 = useCourseInfo2(id);
-
+    const courseData3 = usecourseInfo3(id);
     const instructors = courseData.visible_instructors?.map((item) => item.display_name );
 
+    const handleOverflow = () => {
+     setOverflow(true)
+      
+    }
+     const  secondsToHms = (d) => {
+      d = Number(d);
+      var h = Math.floor(d / 3600);
+      var m = Math.floor(d % 3600 / 60);
+      
+  
+      var hDisplay = h > 0 ? h + (h == 1 ? " hr  " : " hrs, ") : "";
+      var mDisplay = m > 0 ? m + (m == 1 ? " mt  " : null) : "";
+     
+      return hDisplay + mDisplay  
+  }
  
    return <div className="border h-[450px] bg-black flex justify-around  ml-[-45px] ">
          <div className=" 2xl:ml-[100px] xl:ml-[200px]   w-[840px] h-96  " >
@@ -47,7 +63,32 @@ const CourseInfo = () => {
                 <p className="pt-6">{courseData?.num_subscribers?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
                 <p className=" text-xl text-amber-600">Learners</p>
                 </div>
+               
             </div>
+            <div  className="flex justify-between">
+            <h1 className="text-4xl font-bold mt-20 text-gray-500"> Course Content</h1>
+            {overflow && <div onClick={() => setOverflow(false)} className="text-xl hover:text-black cursor-pointer font-extralight mr-[-80px] mt-22 text-gray-500">Show less</div>}
+            </div>
+            <div className={` h-[823px] w-[940px] mt-8 ${overflow? "overflow-visible" : "overflow-hidden"}`}>
+                 {courseData3?.curriculum_context?.data?.sections.map((item) => {
+                  return  <div key = {item.index} className="flex justify-between rounded-lg  border border-b-gray-600 p-4 my-1.5 text-lg font-semibold bg-gray-100" > 
+                  <div className="flex">
+                   <div  className="cursor-pointer px-4">⌄</div>
+                  {item.title}
+                  </div>
+                  <div className="flex">
+                  <p className="font-light text-lg text-gray-600 px-2 ">{item.lecture_count} Lectures</p>
+                  -  
+                  <p className="font-light text-lg text-gray-600 px-2">{secondsToHms(item.content_length)  } Minutes</p>
+                  </div>
+                      </div> 
+                     
+                  }) }
+            </div>
+            {!overflow && <div onClick={handleOverflow} className=" mt-4 w-[940px] text-center rounded-lg text-amber-600  border border-amber-600 p-4 my-1.5 text-xl font-semibold cursor-pointer hover:bg-amber-50">
+            {  courseData3?.curriculum_context?.data?.sections.length > 12 && courseData3?.curriculum_context?.data?.sections.length - 12  } More Sections
+            </div>
+            }
          </div>
 
 

@@ -20,7 +20,7 @@ const Header = ({allCourses , setFilteredCourses }) => {
   }
 
   const cartItems = useSelector((store) => store.cart.items)
-  console.log(cartItems);
+  
   
   return (
     <div className="border shadow-lg flex justify-between ">
