@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 
-const Personal = ({courseData, courseData2}) => {
+const Personal = ({courseData, courseData2 , courseData3}) => {
   
     const [isAdded , setIsAdded] = useState(false);
     
@@ -19,12 +19,16 @@ const Personal = ({courseData, courseData2}) => {
    
    if(isAdded) alert("Item already added to cart");
    
-
+  
     
    }
+   const discount =Math.round((((courseData?.price_detail?.amount - courseData3?.buy_button?.button?.payment_data?.purchasePrice?.amount)/courseData?.price_detail?.amount)*100))
  return <div className= "h-[720px] ">
- <p className="font-stretch-expanded font-serif font-bold text-3xl  m-4 p-2 flex mt-4">{courseData.price}</p>
- 
+    <span className="flex">
+<p className="font-stretch-expanded font-serif font-bold text-3xl  m-4 p-2  mt-4">{courseData3?.buy_button?.button?.payment_data?.purchasePrice?.price_string}</p>
+<p className=" text-gray-400 line-through font-stretch-expanded font-serif font-bold text-2xl  my-4 p-2  mt-4">{courseData?.price}  </p>
+<p className="font-stretch-expanded  font-bold text-amber-600 text-xl  my-4 p-2  mt-4">({discount } % off)</p>
+</span>
  <div className="flex mt-[-15px] ">
  <div onClick = {handleCart} className="cursor-pointer text-xl m-4 p-4  w-4/6 font-bold font-stretch-105% text-center rounded-2xl border border-amber-600 hover:bg-amber-400">
  <p className="">Add To Cart</p>
