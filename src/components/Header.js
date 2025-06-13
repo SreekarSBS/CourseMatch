@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import { LOGO_URL } from "../utils/constants";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import Explore from "./Explore";
 
 
 
 
 const Header = ({allCourses , setFilteredCourses }) => {
   const [isLoggedIn , setIsLoggedIn]  =useState(false);
+  
  const [searchText, setSearchText] = useState("");
   const handleClick = () => {
     setIsLoggedIn(!isLoggedIn);
@@ -29,8 +31,10 @@ const Header = ({allCourses , setFilteredCourses }) => {
         <Link to="/">
           <img className="h-12 w-auto mr-6" src={LOGO_URL} />
         </Link>
-        <span className="m-2 pt-2 text-lg xl:ml-8 ">
-          <Link to="/Explore">Explore</Link>
+        <span  className="group m-2 pt-2 px-4 rounded-xl text-xl xl:ml-8 cursor-pointer  hover:bg-amber-200">
+          Explore
+        <Explore />
+          
         </span>
       </div>
 

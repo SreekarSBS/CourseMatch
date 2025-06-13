@@ -68,7 +68,7 @@ const Body = () => {
     return <div className="">
          <div className="p-24">
       
-      { filteredCourses? <EmblaCarousel/ > : <Shimmer /> }
+      { filteredCourses? <EmblaCarousel /> : <Shimmer /> }
     </div>
 
         <div className="cards-container flex justify-evenly flex-wrap">

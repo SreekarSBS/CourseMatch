@@ -7,7 +7,7 @@ const EmblaCarousel = () => {
 
   return (
     <div className="embla" ref={emblaRef}>
-      <div className="embla__container  ">
+      <div className="embla__container   ">
         
         <div className="embla__slide h-96 ">
 
