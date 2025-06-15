@@ -9,6 +9,7 @@ import EmblaCarousel from "./EmblaCarousel"
 import { Link, useOutletContext } from "react-router-dom"
 
 
+
 /**
  * 
  * Body
@@ -59,7 +60,7 @@ const Body = () => {
     
     
   }
-
+ 
   
   if(!filteredCourses || filteredCourses.length === 0 ) {
     return <Shimmer filteredCourses = {filteredCourses} />
@@ -73,9 +74,9 @@ const Body = () => {
 
         <div className="cards-container flex justify-evenly flex-wrap">
 
-      { filteredCourses.map((course) =>{
+      { filteredCourses.map((course,index) =>{
          
-            return <Link key ={course.id} to = {"/courses/" + course.id }><CourseCard  course = {course} prices = {{coursePrices}} /></Link> 
+            return <Link key ={course.id} to = {"/courses/" + course.id }><CourseCard index = {index}  course = {course} prices = {{coursePrices}} /></Link> 
       } )}
 
         
