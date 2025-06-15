@@ -1,3 +1,4 @@
+import CardOnHover from "./CardOnHover";
 
 
 
@@ -6,14 +7,14 @@ const CourseCard = (props) => {
   const keys = Object.keys(prices);
 
   return ( 
-    <div className=" box w-[305px] h-96 p-2.5  xl:m-10 2xl:m-6 cursor-pointer border-2 border-gray-300 rounded-lg hover:border-amber-600 " >
+    <div className="group 2xl:w-[345px] 2xl:mx-10 2xl:my-2  box w-[305px] h-96 p-2.5  xl:m-10  cursor-pointer  shadow-2xl border-gray-300 rounded-lg hover:border-amber-600 " >
       <img 
-        className="h-40 rounded-lg "
-        src={course.image_240x135}
+        className="ml-0.5 rounded-lg  "
+        src={course.image_480x270}
         alt="Course Thumbnail"
       />
- 
-      <h1 className="font-bold text-md py-4">{course?.title}</h1>
+  <CardOnHover course = {course} />
+      <h1 className="font-bold 2xl:text-lg text-md py-4">{course?.title}</h1>
 
       <h3 className="text-gray-500">{course?.visible_instructors[0]?.title}</h3>
       <h3 className= "">
@@ -24,9 +25,9 @@ const CourseCard = (props) => {
         </span> 
       </h3>
       
- 
+
     
-    
+   
     
 
       {keys.map((idx) => {

@@ -75,7 +75,7 @@ const Body = () => {
 
       { filteredCourses.map((course) =>{
          
-            return <Link key ={course.id} to = {"/courses/" + course.id }><CourseCard   course = {course} prices = {{coursePrices}} /></Link> 
+            return <Link key ={course.id} to = {"/courses/" + course.id }><CourseCard  course = {course} prices = {{coursePrices}} /></Link> 
       } )}
 
         
