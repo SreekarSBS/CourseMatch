@@ -105,12 +105,12 @@ const CourseInfo = () => {
             {  courseData3?.curriculum_context?.data?.sections.length > 12 && courseData3?.curriculum_context?.data?.sections.length - 12  } More Sections
             </div>
             }
-             {!overflow && <div className="mt-18   ">
+             {!overflow && <div className="mt-18 h-[900px] w-[1640px]  overflow-y-scroll   ">
               <p className=" mb-6 text-4xl font-bold  text-gray-500">Students also Bought</p>
-              {already?.map((item) => <div className="flex justify-evenly border-b-2 w-[1000px] border-gray-300  m-4 p-4 text-xl" key = {item.id}>
+              {already?.map((item) => <div className=" flex items-center justify-around border-b-2 w-[1500px] border-gray-300  m-4 p-4 text-xl" key = {item.id}>
                 
                 <img className="w-50" src = {item.image_304x171}  />
-               <div className="m-2 p-2 font-lg font-bold"> {item.title}
+               <div className="m-2 p-2  font-lg font-bold"> <p className="w-[400px]">{item.title}</p>
                
                
               <div className={`w-36 mt-2 max-h-14 overflow-hidden pt-2 text-center ml-4 rounded-2xl h-10 ${item?.bestseller_badge_content?.badge_text === "Bestseller" ? " bg-green-400" : "bg-amber-400"}  text-black  border font-stretch-110%  border-amber-300`}>{  item?.bestseller_badge_content?.badge_text || "Premium" }   </div>   
@@ -118,7 +118,7 @@ const CourseInfo = () => {
                </div>
                <div className="m-2 p-2 text-amber-600 font-semibold">{item.avg_rating.toFixed(1)} 🌟</div>
                <div className="m-2 p-2 font-extralight">{item?.num_subscribers?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
-               <div className="cursor-pointer   my-4 py-2  font-bold  text-center rounded-2xl border border-amber-600 hover:bg-amber-400">
+               <div className="cursor-pointer   h-14 pt-4  font-bold  text-center rounded-2xl border border-amber-600 hover:bg-amber-400">
  <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 128 128"
