@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 const useCourseInfo4 = (id) => {
-     const [already,setAlready] = useState();
+     const [already,setAlready] = useState([]);
 
      useEffect( () => {
        fetchData();
