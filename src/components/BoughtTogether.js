@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useBoughtTogether from "../utils/useBoughtTogether";
 
 const BoughtTogether = ({id}) => {
@@ -9,7 +10,7 @@ const BoughtTogether = ({id}) => {
         <div className="text-4xl m-4 p-4  font-bold text-gray-500">Frequently Bought Together</div>
         <div className="m-4 p-4">
         {FBTogether?.map((item,index) => {
-            return( <div key = {item.id} className=" ">
+            return( <Link key = {item.id} to = {"/courses/" + item.id} ><div  className=" ">
                 <div className=" p-4 mx-4 my-6 text-2xl flex relative" >
                     <img src = {item.image_304x171} /> 
                     <div>
@@ -25,7 +26,7 @@ const BoughtTogether = ({id}) => {
 </svg>
 </div>}
                 </div>
-                    )
+                </Link> )
             })}
             </div>
     </div>
