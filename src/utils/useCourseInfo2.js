@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 
 const useCourseInfo2 = (id) => {
     const [courseInfo, setCourseInfo] = useState([]);
-
+    const [loading2 , setLoading2] = useState(true)
     useEffect(() => {
+        setLoading2(true)
         fetchData();
-    },[])
+    },[id])
 
     const fetchData = async() => {
        
@@ -14,9 +15,10 @@ const useCourseInfo2 = (id) => {
        
         
         setCourseInfo(jsonData);
+        setLoading2(false)
     }
 
-    return courseInfo;
+    return {courseInfo,loading2};
 }
 
 export default useCourseInfo2;

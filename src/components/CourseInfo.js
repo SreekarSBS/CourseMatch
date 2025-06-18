@@ -4,30 +4,36 @@
 import { useParams } from "react-router-dom";
 import useCourseInfo from "../utils/useCourseInfo";
 import useCourseInfo2 from "../utils/useCourseInfo2";
-import { useState } from "react";
+import {  useState } from "react";
 import Personal from "./Personal";
 import Teams from "./Teams";
-import usecourseInfo3 from "../utils/useCourseInfo3";
+import useCourseInfo3 from "../utils/useCourseInfo3";
 import AccordionContent from "./AccordionContent";
 import AlreadyBought from "./AlreadyBought";
 import BoughtTogether from "./BoughtTogether";
+import Shimmer from "./Shimmer";
+import CourseInfoShimmer from "./CourseInfoShimmer";
+
 
 
 const CourseInfo = () => {
     
   
     const [showAccordion , setShowAccordion] = useState(null);
-    const [index , setIndex] = useState();
+    
     const [isPersonal , setIsPersonal] = useState(true);
     const {id} = useParams();
+    const {courseInfo: courseData , loading} = useCourseInfo(id)
+    const {courseInfo: courseData2 , loading2} = useCourseInfo2(id)
+    const {courseData:courseData3 , loading3} = useCourseInfo3(id)
     const [overflow , setOverflow] = useState(false)
-    const courseData = useCourseInfo(id);
-    const courseData2 = useCourseInfo2(id);
-    const courseData3 = usecourseInfo3(id);
     
-    const instructors = courseData.visible_instructors?.map((item) => item.display_name );
-
+    if(!courseData || !courseData2 || !courseData3 || loading || loading2 || loading3) return <CourseInfoShimmer />
+    const instructors = courseData?.visible_instructors?.map((item) => item.display_name );
+   
     
+    
+ 
 
     const handleOverflow = () => {
      setOverflow(true)
@@ -46,7 +52,7 @@ const CourseInfo = () => {
      
       return hDisplay + mDisplay  
   }
- 
+  
    return <div className="border h-[450px] bg-black flex justify-evenly  ml-[-45px] ">
          <div className=" 2xl:ml-[100px] xl:ml-[200px]   w-[840px] h-96  " >
            <h1 className=" m-6 p-6 text-cyan-200 font-extralight text-5xl font-serif">{courseData.title}</h1>

@@ -1,7 +1,7 @@
 import React, {  useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
-import { BrowserRouter, createBrowserRouter, Outlet } from "react-router-dom";
+import {  createBrowserRouter, Outlet } from "react-router-dom";
 import Body from "./components/Body";
 import Cart from "./components/Cart";
 import About from "./components/About";
@@ -87,6 +87,7 @@ const appRouter = createBrowserRouter([
             path : "/courses/:id",
             element : <CourseInfo/>
         }
+        
     ]
 
 },])

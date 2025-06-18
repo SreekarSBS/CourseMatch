@@ -10,9 +10,9 @@ const AlreadyBought = ({id}) => {
     }
   return <> <div className={`mt-18 ${overflow ?  "h-auto" : "h-[960px]"}  w-[1100px]  ${overflow ?  "overflow-visible" : "overflow-hidden"}   `}>
   <p className=" mb-6 text-4xl font-bold  text-gray-500">Students also Bought</p>
-  {already?.map((item) => <Link to = {"/courses/"+item.id} key = {item.id}><div className=" flex items-center justify-around border-b-2 w-[1000px] border-gray-300  m-4 p-4 text-xl" >
+  {already?.map((item) => <div key = {item?.id} className=" flex items-center justify-around border-b-2 w-[1000px] border-gray-300  m-4 p-4 text-xl" >
     
-    <img className="w-50" src = {item.image_304x171}  />
+  <Link to ={`/courses/${item?.id}`} > <img className="w-50" src = {item.image_304x171}  /> </Link>
    <div className="m-2 p-2  font-lg font-bold"> <p className="w-[400px]">{item.title}</p>
    
    
@@ -35,7 +35,7 @@ fill="#231f20"
 </svg>
 
 </div>
-    </div></Link>)
+    </div>)
     }
  
 </div>
