@@ -4,7 +4,7 @@
 import { useParams } from "react-router-dom";
 import useCourseInfo from "../utils/useCourseInfo";
 import useCourseInfo2 from "../utils/useCourseInfo2";
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import Personal from "./Personal";
 import Teams from "./Teams";
 import useCourseInfo3 from "../utils/useCourseInfo3";
@@ -27,8 +27,16 @@ const CourseInfo = () => {
     const {courseInfo: courseData2 , loading2} = useCourseInfo2(id)
     const {courseData:courseData3 , loading3} = useCourseInfo3(id)
     const [overflow , setOverflow] = useState(false)
-    
-    if(!courseData || !courseData2 || !courseData3 || loading || loading2 || loading3) return <CourseInfoShimmer />
+
+    useEffect(() => {
+      setShowAccordion(null)
+    },[id])
+
+    const val = loading || loading2 || loading3;
+    if(!courseData || !courseData2 || !courseData3 ||val ) {
+     
+      return <CourseInfoShimmer />
+    }
     const instructors = courseData?.visible_instructors?.map((item) => item.display_name );
    
     
