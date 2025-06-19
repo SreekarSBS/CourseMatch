@@ -11,7 +11,7 @@ import useCourseInfo3 from "../utils/useCourseInfo3";
 import AccordionContent from "./AccordionContent";
 import AlreadyBought from "./AlreadyBought";
 import BoughtTogether from "./BoughtTogether";
-import Shimmer from "./Shimmer";
+
 import CourseInfoShimmer from "./CourseInfoShimmer";
 
 
