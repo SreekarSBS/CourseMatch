@@ -137,7 +137,7 @@ const CourseInfo = () => {
               <div onClick={() => {setIsPersonal(false)}} className={`cursor-pointer w-1/2 h-20 ${!isPersonal ? "bg-amber-500 text-black" : "text-white"}  text-center pt-5 text-shadow-black text-3xl font-stretch-125%`}>Teams</div>
             </div>
            
-            {isPersonal ? <Personal courseData = {courseData}  courseData2 = {courseData2} courseData3 = {courseData3} /> : <Teams/>}
+          {isPersonal ? <Personal courseData = {courseData} courseData2 = {courseData2} courseData3 = {courseData3}  /> : <Teams/>}
             
          </div>
    </div>
