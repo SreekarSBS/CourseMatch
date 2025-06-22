@@ -15,11 +15,11 @@ const BoughtTogether = ({id}) => {
  
  return (
     <div className=" border border-gray-300  mt-16  w-[1000px]">
-        <div className="text-4xl m-4 p-4  font-bold text-gray-500">Frequently Bought Together</div>
+        <div className="text-4xl m-4 p-4  font-bold text-gray-500  underline ">Frequently Bought Together</div>
         <div className="m-4 p-4">
         {FBTogether?.map((item,index) => {
             return( <Link key = {item.id} to = {"/courses/" + item.id} ><div  className=" ">
-                <div className=" p-4 mx-4 my-6 text-2xl flex relative" >
+                <div className=" p-4 mx-4 my-4 text-2xl flex relative" >
                     <img src = {item.image_304x171} /> 
                     <div>
                         <div className="m-2  px-2 text-2xl font-bold">{item.title}</div>
