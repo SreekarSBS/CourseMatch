@@ -7,6 +7,8 @@ import {PRICES3} from "../utils/constants"
 import Shimmer from "./Shimmer"
 import EmblaCarousel from "./EmblaCarousel"
 import { Link, useOutletContext } from "react-router-dom"
+import Footer from "./Footer"
+
 
 
 
@@ -80,7 +82,7 @@ const Body = () => {
       } )}
 
         
-
+<Footer />
         </div>
     </div>
 }

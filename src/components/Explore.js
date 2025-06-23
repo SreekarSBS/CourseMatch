@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NAVIGATE } from "../utils/constants";
 import SubExplore from "./SubExplore";
 
+
 const Explore = () => {
     const [ navigationList, setNavigationList] = useState();
     const [hoveredCategory,sethoveredCategory] = useState();
@@ -37,7 +38,7 @@ const Explore = () => {
           )}
             </div>
       })}
-       
+      
     </div>
 }
 

@@ -15,6 +15,7 @@ import BoughtTogether from "./BoughtTogether";
 import CourseInfoShimmer from "./CourseInfoShimmer";
 import Reviews from "./Reviews";
 import Scrollable from "./Scrollable";
+import Footer from "./Footer";
 
 
 
@@ -72,7 +73,7 @@ const CourseInfo = () => {
       return hDisplay + mDisplay  
   }
   
-   return <div className="border h-[450px] bg-black flex justify-evenly  ml-[-45px] ">
+   return <div className=" border h-[450px] bg-black flex justify-evenly  ml-[-45px] ">
          <div className=" 2xl:ml-[100px] xl:ml-[200px]   w-[840px] h-96  " >
            <h1 className=" m-6 p-6 text-cyan-200 font-extralight text-5xl font-serif">{courseData.title}</h1>
             <h1 className="   ml-12 font-serif text-gray-300 text-xl">{courseData.headline}</h1>
@@ -106,6 +107,7 @@ const CourseInfo = () => {
             <h1 className="text-4xl font-bold mt-20 text-gray-500"> Course Content</h1>
             {overflow && <div onClick={() => setOverflow(false)} className="text-xl hover:text-black cursor-pointer font-extralight mr-[-80px] mt-22 text-gray-500">Show less</div>}
             </div>
+            
             <div className={`${courseData3?.curriculum_context?.data?.sections.length < 12 && !overflow? "h-auto" : "h-[823px]"}  ${overflow? "h-auto" : "h-[823px]"}   w-[940px] mt-8 ${overflow? "overflow-visible" : "overflow-hidden"}`}>
                  {courseData3?.curriculum_context?.data?.sections.map((item) => {
                   return <div key = {item.index}>  <div  className="flex justify-between rounded-lg  border border-b-gray-600 p-4 my-1.5 text-lg font-semibold bg-gray-100" > 
@@ -129,10 +131,14 @@ const CourseInfo = () => {
             {  courseData3?.curriculum_context?.data?.sections.length > 12 && courseData3?.curriculum_context?.data?.sections.length - 12  } More Sections
             </div>
             }
+           
             <AlreadyBought id ={id} />
            
              <BoughtTogether id  ={id} />
              <Reviews id = {id} />
+          
+             <Footer />
+
          </div>
 
 
@@ -153,6 +159,7 @@ const CourseInfo = () => {
 
          </div>
         <Scrollable courseData3 = {courseData3} courseData2 = {courseData2} courseData = {courseData} isVisible={isVisible} />
+        
    </div>
 }
 
