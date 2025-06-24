@@ -136,8 +136,7 @@ const CourseInfo = () => {
            
              <BoughtTogether id  ={id} />
              <Reviews id = {id} />
-          
-             <Footer />
+           
 
          </div>
 
