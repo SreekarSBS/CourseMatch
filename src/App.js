@@ -11,7 +11,8 @@ import { RouterProvider } from "react-router-dom";
 import CourseInfo from "./components/CourseInfo";
 import appStore from "./utils/appStore";
 import { Provider, useSelector } from "react-redux";
-import Footer from "./components/Footer";
+
+
 
 
 

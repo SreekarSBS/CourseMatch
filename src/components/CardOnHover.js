@@ -6,7 +6,7 @@ const CardOnHover = ({course,index}) => {
     const options = { month: 'long', year: 'numeric' };
   
     return (
-        <div className={`z-10 hidden  border border-amber-400 bg-gray-50 absolute group-hover:block ${((index) % 5 ) === 3 || ((index) % 5 ) === 4 ? "2xl:ml-[-300px]" : "2xl:ml-[300px]"}  2xl:mt-[-350px]   w-[455px]  h-auto   overflow-x-hidden xl:m-10 2xl:m-6 cursor-pointer shadow-2xl rounded-lg hover:border-amber-600 box-border `}>
+        <div className={`z-10 hidden absolute  border border-amber-400 bg-gray-50 absolute group-hover:block ${((index) % 5 ) === 3 || ((index) % 5 ) === 4 ? "2xl:ml-[-300px]" : "2xl:ml-[300px]"}  2xl:mt-[-350px]   w-[455px]  h-auto   overflow-x-hidden xl:m-10 2xl:m-6 cursor-pointer shadow-2xl rounded-lg hover:border-amber-600 box-border `}>
             <div className="mx-4 my-2 p-4 text-2xl font-bold">{course.title}</div>
             <span className="flex justify-center ">
             <div className="w-36  text-center pt-2  rounded-2xl h-10 font-stretch-110%   text-black bg-amber-400">{course?.badges?.[0]?.badge_text || "Premium"} </div>

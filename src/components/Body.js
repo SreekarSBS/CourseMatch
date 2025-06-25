@@ -12,6 +12,7 @@ import Footer from "./Footer"
 
 
 
+
 /**
  * 
  * Body
@@ -74,7 +75,7 @@ const Body = () => {
       { filteredCourses? <EmblaCarousel /> : <Shimmer /> }
     </div>
 
-        <div className="cards-container flex justify-evenly flex-wrap">
+        <div className="cards-container flex justify-evenly py-38  overflow-x-scroll">
 
       { filteredCourses.map((course,index) =>{
          
