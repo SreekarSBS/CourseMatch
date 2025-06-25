@@ -137,7 +137,7 @@ const CourseInfo = () => {
              <BoughtTogether id  ={id} />
              <Reviews id = {id} />
           
-             <div className="w-[2600px] ml-[-540px]"><Footer /></div>
+             <div className="w-[2500px] overflow-hidden ml-[-540px]"><Footer /></div>
 
          </div>
 

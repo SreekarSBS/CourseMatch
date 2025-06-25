@@ -75,7 +75,7 @@ const Body = () => {
       { filteredCourses? <EmblaCarousel /> : <Shimmer /> }
     </div>
 
-        <div className="cards-container flex justify-evenly py-38  overflow-x-scroll">
+        <div className="cards-container flex justify-evenly py-38 flex-wrap  overflow-x-scroll">
 
       { filteredCourses.map((course,index) =>{
          
@@ -83,7 +83,7 @@ const Body = () => {
       } )}
 
         
-<Footer />
+<Footer  />
         </div>
     </div>
 }

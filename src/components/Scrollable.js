@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Personal from './Personal'
+import Teams from './Teams'
 
 const Scrollable = ({courseData3,courseData,courseData2,isVisible}) => {
     const[isPersonal,setIsPersonal] = useState(true)
