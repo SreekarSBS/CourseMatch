@@ -83,8 +83,10 @@ const Body = () => {
       } )}
 
         
-<Footer  />
+
         </div>
+          
+<div className="w-[2500px] overflow-hidden ml-[-100px] mt-[-210px] "><Footer /></div>
     </div>
 }
 

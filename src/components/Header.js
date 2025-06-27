@@ -31,14 +31,14 @@ const Header = ({allCourses , setFilteredCourses }) => {
         <Link to="/">
           <img className="h-12 w-auto mr-6" src={LOGO_URL} />
         </Link>
-        <span  className="group m-2 pt-2 px-4 rounded-xl text-xl xl:ml-8 cursor-pointer  hover:bg-amber-200">
+        <span  className="2xl:text-2xl font-extralight group m-2 pt-2 px-4 rounded-xl text-xl xl:ml-8 cursor-pointer  hover:bg-amber-200">
           Explore
         <Explore />
           
         </span>
       </div>
 
-      <div>
+      <div className="font-extralight">
         <input
           onChange={handleSearch}
           type="text"
@@ -46,13 +46,13 @@ const Header = ({allCourses , setFilteredCourses }) => {
           className="border border-black mt-10 p-2 2xl:pr-96 xl:pr-80 rounded-2xl"
         ></input>
       </div>
-      
-      <button className="bg-amber-300 h-6 w-6 m-12 p-3 2xl:ml-[969px] absolute rounded-2xl xl:ml-[910px] cursor-pointer"></button>
+{/*       
+      <button className="bg-amber-300 h-6 w-6 m-12 p-3 2xl:ml-[969px] absolute rounded-2xl xl:ml-[910px] cursor-pointer"></button> */}
       </div>
       <div className="flex items-center 2xl:mr-16 xl:mr-6 ">
-      <div className=" text-lg  2xl:ml-6 xl:mr-8 "><Link to = "/Business">Coursematch Business</Link></div>
-      <div className=" text-lg  2xl:ml-6 xl:mr-8 "><Link to = "/About">About Us</Link></div>
-      <div className=" text-lg  2xl:ml-6  "><Link to = "/Cart"><svg
+      <div className="font-extralight text-lg 2xl:text-2xl  2xl:ml-6 xl:mr-8 "><Link to = "/Business">Coursematch Business</Link></div>
+      <div className="font-extralight text-lg 2xl:text-2xl  2xl:ml-6 xl:mr-8 "><Link to = "/About">About Us</Link></div>
+      <div className="font-extralight text-lg 2xl:text-2xl 2xl:ml-6  "><Link to = "/Cart"><svg
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   x="0"
@@ -71,7 +71,7 @@ const Header = ({allCourses , setFilteredCourses }) => {
   {cartItems.length}
   </div></Link>
 </div>
-        <div onClick={handleClick} className=" text-lg ml-6 cursor-pointer"> { isLoggedIn ? "Logout" : "Login" }</div>
+        <div onClick={handleClick} className="2xl:text-2xl font-extralight text-lg ml-6 cursor-pointer"> { isLoggedIn ? "Logout" : "Login" }</div>
         
       
       </div>
