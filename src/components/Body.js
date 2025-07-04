@@ -53,9 +53,9 @@ const Body = () => {
     const data2 = await fetch(PRICES2);
     const data3 = await fetch(PRICES3);
 
-    const jsonData1 = await data1.json();
-    const jsonData2 = await data2.json();
-    const jsonData3 = await data3.json();
+    const jsonData1 = await data1;
+    const jsonData2 = await data2;
+    const jsonData3 = await data3;
 
 
     setCoursePrices({...jsonData1?.courses ,...jsonData2?.courses, ...jsonData3?.courses});

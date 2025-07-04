@@ -6448,3 +6448,5 @@ export const PRICES1 = "https://www.udemy.com/api-2.0/pricing/?course_ids=136207
 export const PRICES2 = "https://www.udemy.com/api-2.0/pricing/?course_ids=3600048,5170404,5231088,5672296&fields[pricing_result]=price,discount_price,list_price,price_detail,price_serve_tracking_id"
 export const PRICES3 = "https://www.udemy.com/api-2.0/pricing/?course_ids=5993822,6100015,625204,6566789,762616,793796,851712,950390&fields[pricing_result]=price,discount_price,list_price,price_detail,price_serve_tracking_id"
 export const NAVIGATE = "https://www.udemy.com/api-2.0/structured-data/navigation-lists/?list_ids=ud-main&locale=en_US"
+
+

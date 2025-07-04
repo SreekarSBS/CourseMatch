@@ -1,0 +1,189 @@
+{
+    "courses": {
+    "625204": {
+    "_class": "pricing_result",
+    "price_serve_tracking_id": "d3uZ2CScSSqZseP0ie_HFw",
+    "price": {
+    "amount": 3399,
+    "currency": "INR",
+    "price_string": "₹3,399",
+    "currency_symbol": "₹"
+    },
+    "list_price": {
+    "amount": 3399,
+    "currency": "INR",
+    "price_string": "₹3,399",
+    "currency_symbol": "₹"
+    },
+    "discount_price": null,
+    "price_detail": {
+    "amount": 3399,
+    "currency": "INR",
+    "price_string": "₹3,399",
+    "currency_symbol": "₹"
+    }
+    },
+    "762616": {
+    "_class": "pricing_result",
+    "price_serve_tracking_id": "89aVpPZXS82ytVvuPszRmg",
+    "price": {
+    "amount": 3849,
+    "currency": "INR",
+    "price_string": "₹3,849",
+    "currency_symbol": "₹"
+    },
+    "list_price": {
+    "amount": 3849,
+    "currency": "INR",
+    "price_string": "₹3,849",
+    "currency_symbol": "₹"
+    },
+    "discount_price": null,
+    "price_detail": {
+    "amount": 3849,
+    "currency": "INR",
+    "price_string": "₹3,849",
+    "currency_symbol": "₹"
+    }
+    },
+    "793796": {
+    "_class": "pricing_result",
+    "price_serve_tracking_id": "UjIIaxmJSJa4-DhxmRpJjw",
+    "price": {
+    "amount": 3219,
+    "currency": "INR",
+    "price_string": "₹3,219",
+    "currency_symbol": "₹"
+    },
+    "list_price": {
+    "amount": 3219,
+    "currency": "INR",
+    "price_string": "₹3,219",
+    "currency_symbol": "₹"
+    },
+    "discount_price": null,
+    "price_detail": {
+    "amount": 3219,
+    "currency": "INR",
+    "price_string": "₹3,219",
+    "currency_symbol": "₹"
+    }
+    },
+    "851712": {
+    "_class": "pricing_result",
+    "price_serve_tracking_id": "gscn4Gw_Ta2-wU8Quzpxug",
+    "price": {
+    "amount": 4109,
+    "currency": "INR",
+    "price_string": "₹4,109",
+    "currency_symbol": "₹"
+    },
+    "list_price": {
+    "amount": 4109,
+    "currency": "INR",
+    "price_string": "₹4,109",
+    "currency_symbol": "₹"
+    },
+    "discount_price": null,
+    "price_detail": {
+    "amount": 4109,
+    "currency": "INR",
+    "price_string": "₹4,109",
+    "currency_symbol": "₹"
+    }
+    },
+    "950390": {
+    "_class": "pricing_result",
+    "price_serve_tracking_id": "LqqTe5ejR0OSOfQQnC3ysQ",
+    "price": {
+    "amount": 4109,
+    "currency": "INR",
+    "price_string": "₹4,109",
+    "currency_symbol": "₹"
+    },
+    "list_price": {
+    "amount": 4109,
+    "currency": "INR",
+    "price_string": "₹4,109",
+    "currency_symbol": "₹"
+    },
+    "discount_price": null,
+    "price_detail": {
+    "amount": 4109,
+    "currency": "INR",
+    "price_string": "₹4,109",
+    "currency_symbol": "₹"
+    }
+    },
+    "5993822": {
+    "_class": "pricing_result",
+    "price_serve_tracking_id": "Q7aqDCy9Qbu0JxbKJUxphg",
+    "price": {
+    "amount": 3839,
+    "currency": "INR",
+    "price_string": "₹3,839",
+    "currency_symbol": "₹"
+    },
+    "list_price": {
+    "amount": 3839,
+    "currency": "INR",
+    "price_string": "₹3,839",
+    "currency_symbol": "₹"
+    },
+    "discount_price": null,
+    "price_detail": {
+    "amount": 3839,
+    "currency": "INR",
+    "price_string": "₹3,839",
+    "currency_symbol": "₹"
+    }
+    },
+    "6100015": {
+    "_class": "pricing_result",
+    "price_serve_tracking_id": "nt-70r0-SVqY7_CSeGOOvA",
+    "price": {
+    "amount": 3309,
+    "currency": "INR",
+    "price_string": "₹3,309",
+    "currency_symbol": "₹"
+    },
+    "list_price": {
+    "amount": 3309,
+    "currency": "INR",
+    "price_string": "₹3,309",
+    "currency_symbol": "₹"
+    },
+    "discount_price": null,
+    "price_detail": {
+    "amount": 3309,
+    "currency": "INR",
+    "price_string": "₹3,309",
+    "currency_symbol": "₹"
+    }
+    },
+    "6566789": {
+    "_class": "pricing_result",
+    "price_serve_tracking_id": "1POCs5usTzesTbIXoDSA2Q",
+    "price": {
+    "amount": 2049,
+    "currency": "INR",
+    "price_string": "₹2,049",
+    "currency_symbol": "₹"
+    },
+    "list_price": {
+    "amount": 2049,
+    "currency": "INR",
+    "price_string": "₹2,049",
+    "currency_symbol": "₹"
+    },
+    "discount_price": null,
+    "price_detail": {
+    "amount": 2049,
+    "currency": "INR",
+    "price_string": "₹2,049",
+    "currency_symbol": "₹"
+    }
+    }
+    },
+    "bundles": {}
+    }
