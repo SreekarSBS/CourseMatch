@@ -15,7 +15,6 @@ const Explore = () => {
         const jsonData = await data.json();
         setNavigationList(jsonData["ud-main"]?.items)
         console.log(navigationList);
-        
     }
 
     return <div className="hidden group-hover:block z-50 bg-gray-100 border rounded-lg  ml-[-23px]  w-96  absolute pt-4 ">

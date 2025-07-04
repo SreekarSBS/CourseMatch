@@ -14,8 +14,8 @@ const EmblaCarousel = () => {
            <div className="flex justify-between ">
             <div className="2xl:ml-24  mt-[-25px]  ">
                 
-                <h1 className=" mt-18 2xl:mt-10 2xl:pr-0 xl:pr-32 2xl:text-7xl xl:text-5xl font-serif">Learn Without</h1>
-                <h1 className="  2xl:text-7xl 2xl:mr-0 xl:mr-14 xl:text-5xl pr-60 mt-3 font-serif">Limits</h1>
+                <h1 className=" mt-18 2xl:mt-10 2xl:pr-0 xl:pr-32 2xl:text-7xl xl:text-5xl font-serif">Start Learning</h1>
+                <h1 className="  2xl:text-7xl 2xl:mr-0 xl:mr-14 xl:text-5xl pr-60 mt-3 font-serif">Today</h1>
                 
                 <div className="text-gray-400 wrap w-lg mt-2">
                   <p className="2xl:ml-4"> Start, switch, or advance your career with more than </p>
@@ -61,8 +61,8 @@ const EmblaCarousel = () => {
 <div className="flex justify-between ">
  <div className="2xl:ml-24  mt-[-25px]  ">
      
-     <h1 className=" mt-18 2xl:mt-10 2xl:pr-0 xl:pr-32 2xl:text-7xl xl:text-5xl font-serif">Learn Without</h1>
-     <h1 className="  2xl:text-7xl 2xl:mr-0 xl:mr-14 xl:text-5xl pr-60 mt-3 font-serif">Limits</h1>
+     <h1 className=" mt-18 2xl:mt-10 2xl:pr-0 xl:pr-32 2xl:text-7xl xl:text-5xl mr-32 font-serif">Boost your</h1>
+     <h1 className="  2xl:text-7xl 2xl:mr-0 xl:mr-14 xl:text-5xl pr-60 mt-3 font-serif">Skillset</h1>
      
      <div className="text-gray-400 wrap w-lg mt-2">
        <p className="2xl:ml-4"> Start, switch, or advance your career with more than </p>
