@@ -12,14 +12,6 @@ import CourseInfo from "./components/CourseInfo";
 import appStore from "./utils/appStore";
 import { Provider, useSelector } from "react-redux";
 
-
-
-
-
-
-
-
-
 // Outlet is used to render the ((child components)) in the parent component.
  const AppLayout  = () => {
     
