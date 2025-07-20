@@ -3,6 +3,8 @@ import { LOGO_URL } from "../utils/constants";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Explore from "./Explore";
+import Auth from "./Auth";
+
 
 
 
@@ -71,7 +73,7 @@ const Header = ({allCourses , setFilteredCourses }) => {
   {cartItems.length}
   </div></Link>
 </div>
-        <div onClick={handleClick} className="2xl:text-2xl font-extralight text-lg ml-6 cursor-pointer"> { isLoggedIn ? "Logout" : "Login" }</div>
+     <div className="m-8 text-amber-50 text-center pt-1 rounded-xl h-8 w-24 cursor-pointer  bg-gradient-to-r from-amber-400 to-amber-600">   <Auth/></div>
         
       
       </div>
