@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import ModernIcon from "./GithubButton";
 
 const Footer = () => {
+  const location = useLocation();
+    console.log(location.pathname);
+    const {id} = useParams()
+    console.log(id);
+    // console.log(location.pathname === "/courses/");
+    
     return (
-      <div className="flex items-center justify-around mt-18 overflow-clip shadow-2xl w-full h-64  bg-black">
+      <div className={` ${location.pathname === "/courses/"+id ? "hidden" : "flex"} items-center justify-around mt-18 overflow-clip shadow-2xl w-full h-64  bg-black`}>
         <div className="flex items-center">
           <div className=" text-white font-extralight text-3xl hover:underline-offset-2 "><a target="_blank" className="group text-amber-400 transition-all duration-300 ease-in-out" href="https://github.com/SreekarSBS/">
   <span className="bg-left-bottom bg-gradient-to-r from-amber-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-700 ease-out">

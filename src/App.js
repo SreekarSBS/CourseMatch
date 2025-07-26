@@ -11,7 +11,8 @@ import { RouterProvider } from "react-router-dom";
 import CourseInfo from "./components/CourseInfo";
 import appStore from "./utils/appStore";
 import { Provider, useSelector } from "react-redux";
-import { ClerkProvider } from '@clerk/clerk-react'
+import Footer from "./components/Footer";
+
 
 // Outlet is used to render the ((child components)) in the parent component.
  const AppLayout  = () => {
@@ -27,11 +28,15 @@ import { ClerkProvider } from '@clerk/clerk-react'
 
     return (
    
-    <div>
+    <div className="min-h-screen flex flex-col">
       
         <Header allCourses = {allCourses} setFilteredCourses = {setFilteredCourses}/>
+        <main className="flex-grow ">
         <Outlet context = {[filteredCourses,setFilteredCourses,allCourses ,setAllCourses]} />
-       
+        </main>
+        
+        <Footer/>
+        
     </div>
 
     )
@@ -89,20 +94,16 @@ const appRouter = createBrowserRouter([
 
 },])
 
-const PUBLISHABLE_KEY = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
 
-if (!PUBLISHABLE_KEY) {
-  throw new Error('Add your Clerk Publishable Key to the .env file')
-}
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+    
     <Provider store={appStore}>
       <RouterProvider router={appRouter} />
     </Provider>
-    </ClerkProvider>
+   
   );
   
 

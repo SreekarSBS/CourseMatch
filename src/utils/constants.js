@@ -1,4 +1,5 @@
 export const LOGO_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjqwSb6AROL1Yyc2Jspw6oCm_vCLvLofUoQ&s"
+export const SMALL_LOGO_URL =" https://m.media-amazon.com/images/I/61KvzUhy-+L.jpg"
 export const CARDS_API = "https://www.udemy.com/api-2.0/course-subcategories/10/labels/?page_size=10&locale=en_US&navigation_locale=en_US"
 export const  courseList = {
     title: 'Learners are viewing',

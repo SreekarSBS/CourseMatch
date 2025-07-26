@@ -15,7 +15,7 @@ import BoughtTogether from "./BoughtTogether";
 import CourseInfoShimmer from "./CourseInfoShimmer";
 import Reviews from "./Reviews";
 import Scrollable from "./Scrollable";
-import Footer from "./Footer";
+
 
 
 
@@ -137,7 +137,7 @@ const CourseInfo = () => {
              <BoughtTogether id  ={id} />
              <Reviews id = {id} />
           
-             <div className="w-[2500px] overflow-hidden ml-[-540px]"><Footer /></div>
+             
 
          </div>
 

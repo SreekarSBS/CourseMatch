@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { LOGO_URL } from "../utils/constants";
-import React, { useState } from "react";
+import { LOGO_URL, SMALL_LOGO_URL } from "../utils/constants";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Explore from "./Explore";
-import Auth from "./Auth";
+
 
 
 
@@ -11,8 +11,16 @@ import Auth from "./Auth";
 
 const Header = ({allCourses , setFilteredCourses }) => {
   const [isLoggedIn , setIsLoggedIn]  =useState(false);
-  
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
  const [searchText, setSearchText] = useState("");
+ useEffect(() => {
+  const handleResize = () => setWindowWidth(window.innerWidth);
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
   const handleClick = () => {
     setIsLoggedIn(!isLoggedIn);
    }
@@ -31,7 +39,8 @@ const Header = ({allCourses , setFilteredCourses }) => {
         <div className="flex justify-between  ">
       <div className="m-4 p-4 flex items-center ">
         <Link to="/">
-          <img className="h-12 w-auto mr-6" src={LOGO_URL} />
+        <img className="h-12 w-auto mr-6" src={windowWidth < 1000 ? SMALL_LOGO_URL : LOGO_URL} alt="Logo" />
+
         </Link>
         <span  className="2xl:text-2xl font-extralight group m-2 pt-2 px-4 rounded-xl text-xl xl:ml-8 cursor-pointer  hover:bg-amber-200">
           Explore
@@ -73,7 +82,7 @@ const Header = ({allCourses , setFilteredCourses }) => {
   {cartItems.length}
   </div></Link>
 </div>
-     <div className="m-8 text-amber-50 text-center pt-1 rounded-xl h-8 w-24 cursor-pointer  bg-gradient-to-r from-amber-400 to-amber-600">   <Auth/></div>
+     <div className="m-8 text-amber-50 text-center pt-1 rounded-xl h-8 w-24 cursor-pointer  bg-gradient-to-r from-amber-400 to-amber-600">   </div>
         
       
       </div>

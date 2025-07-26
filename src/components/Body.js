@@ -70,7 +70,7 @@ const Body = () => {
   }
 
     return <div className="">
-         <div className="p-24">
+         <div className="p-24 hidden xl:block">
       
       { filteredCourses? <EmblaCarousel /> : <Shimmer /> }
     </div>
@@ -86,7 +86,7 @@ const Body = () => {
 
         </div>
           
-<div className="w-[2500px] overflow-hidden ml-[-100px] mt-[-210px] "><Footer /></div>
+
     </div>
 }
 
